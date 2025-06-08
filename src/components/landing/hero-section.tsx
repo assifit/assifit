@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GooglePlayBadge } from '@/components/icons/google-play-badge';
 import { useLanguage } from '@/contexts/language-context';
-import { Dumbbell, Flame } from 'lucide-react'; // Import icons
+// Removed orbiting icons imports
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -49,19 +49,7 @@ export default function HeroSection() {
               data-ai-hint="phone app"
               priority
             />
-            {/* Orbiting Icons - hidden on very small screens to prevent clutter */}
-            <div
-              className="absolute top-1/2 left-1/2 animate-orbit-dumbbell hidden sm:block"
-              aria-hidden="true"
-            >
-              <Dumbbell className="w-10 h-10 text-primary opacity-70" />
-            </div>
-            <div
-              className="absolute top-1/2 left-1/2 animate-orbit-flame hidden sm:block"
-              aria-hidden="true"
-            >
-              <Flame className="w-8 h-8 text-accent opacity-60" />
-            </div>
+            {/* Orbiting icons removed */}
           </div>
         </div>
       </div>
