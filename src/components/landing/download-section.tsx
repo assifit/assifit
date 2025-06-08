@@ -3,7 +3,6 @@
 
 import Link from 'next/link';
 import { GooglePlayBadge } from '@/components/icons/google-play-badge';
-import { AppStoreBadge } from '@/components/icons/app-store-badge';
 import { useLanguage } from '@/contexts/language-context';
 
 export default function DownloadSection() {
@@ -18,15 +17,10 @@ export default function DownloadSection() {
         <p className="text-xl mb-10 max-w-xl mx-auto">
           {t.downloadSubheadline}
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-6">
-          <Link href="https://play.google.com" passHref legacyBehavior>
+        <div className="flex justify-center items-center">
+          <Link href="https://play.google.com/store/apps/details?id=vn.assifit" passHref legacyBehavior>
             <a target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
-              <GooglePlayBadge className="h-auto w-[180px] hover:opacity-90 transition-opacity" />
-            </a>
-          </Link>
-          <Link href="https://www.apple.com/app-store/" passHref legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-              <AppStoreBadge className="h-auto w-[180px] hover:opacity-90 transition-opacity" />
+              <GooglePlayBadge />
             </a>
           </Link>
         </div>

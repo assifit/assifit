@@ -10,7 +10,7 @@
     --card-foreground: 210 10% 23%; /* Dark Cool Gray */
     --popover: 0 0% 100%;
     --popover-foreground: 210 10% 23%;
-    --primary: 14 74% 56%; /* New Primary: Orange-Red #E26139 */
+    --primary: 20 44% 39%; /* New Primary: Rich Brown #8F4C37 */
     --primary-foreground: 0 0% 100%; /* White - for contrast on new primary */
     --secondary: 210 40% 90%; /* Light Cool Gray-Blue */
     --secondary-foreground: 14 74% 36%; /* Darker version of new primary */
@@ -41,30 +41,30 @@
   }
 
   .dark {
-    --background: 222 47% 11%; /* Very Dark Blue-Gray */
-    --foreground: 210 40% 96%; /* Light Gray */
-    --card: 222 40% 15%; /* Darker Blue-Gray */
-    --card-foreground: 210 40% 96%;
-    --popover: 222 40% 15%;
-    --popover-foreground: 210 40% 96%;
-    --primary: 14 74% 66%; /* Lighter New Primary Orange-Red for dark mode */
-    --primary-foreground: 14 30% 10%; /* Dark Warm Gray/Brown text on light primary */
-    --secondary: 222 30% 22%; /* Darker, less saturated blue/gray */
-    --secondary-foreground: 14 74% 80%; /* Lighter version of new primary for text on dark secondary */
-    --muted: 222 30% 20%;
-    --muted-foreground: 210 20% 65%;
-    --accent: 262 80% 68%; /* Lighter Vibrant Purple */
-    --accent-foreground: 222 40% 10%; /* Dark Cool Gray text on accent */
-    --destructive: 0 63% 50%; /* Slightly lighter red */
+    --background: 222 47% 8%; /* Darker Blue-Gray for higher contrast */
+    --foreground: 0 0% 100%; /* Pure White for maximum contrast */
+    --card: 222 40% 12%; /* Darker card background */
+    --card-foreground: 0 0% 100%; /* Pure White text */
+    --popover: 222 40% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 20 60% 55%; /* Brighter, more saturated brown for dark mode */
+    --primary-foreground: 0 0% 100%; /* Pure White text on primary */
+    --secondary: 222 30% 18%; /* Darker secondary */
+    --secondary-foreground: 0 0% 100%; /* Pure White text on secondary */
+    --muted: 222 30% 15%; /* Darker muted background */
+    --muted-foreground: 210 20% 80%; /* Lighter muted text for better contrast */
+    --accent: 262 90% 70%; /* Brighter accent */
+    --accent-foreground: 0 0% 100%; /* Pure White text on accent */
+    --destructive: 0 80% 50%; /* Brighter red */
     --destructive-foreground: 0 0% 100%;
-    --border: 222 30% 25%; /* Darker gray border */
-    --input: 222 30% 22%; /* Dark input background */
-    --ring: 14 74% 66%; /* Lighter New Primary color for focus rings in dark mode */
-    --chart-1: 14 74% 66%; /* Lighter New Primary Orange-Red */
-    --chart-2: 262 80% 68%; /* Lighter Accent Purple */
-    --chart-3: 14 74% 80%; /* Even Lighter New Primary Orange-Red */
-    --chart-4: 262 70% 80%; /* Even Lighter Purple */
-    --chart-5: 190 60% 60%; /* Lighter Complementary Teal/Cyan */
+    --border: 222 30% 30%; /* Lighter border for better visibility */
+    --input: 222 30% 16%; /* Darker input background */
+    --ring: 20 60% 55%; /* Match primary color for focus rings */
+    --chart-1: 20 60% 55%; /* Match primary */
+    --chart-2: 262 90% 70%; /* Match accent */
+    --chart-3: 20 60% 75%; /* Lighter primary */
+    --chart-4: 262 90% 85%; /* Lighter accent */
+    --chart-5: 190 80% 60%; /* Brighter teal */
 
     --sidebar-background: hsl(var(--background));
     --sidebar-foreground: hsl(var(--foreground));

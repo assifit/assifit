@@ -66,7 +66,7 @@ export default function FeaturesSection() {
           {/* Central Image */}
           <div className="flex justify-center items-center flex-shrink-0 order-1 md:order-2 my-6 md:my-0">
             <Image
-              src="https://placehold.co/250x250.png"
+              src="/images/img_feature.png"
               alt="AssiFit Key Features Visual"
               width={250}
               height={250}
