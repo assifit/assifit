@@ -146,7 +146,7 @@ export const translations: Record<Locale, AppTranslations> = {
     privacyPolicyChanges: 'Changes to This Policy',
     privacyPolicyChangesP1: 'We may update this privacy notice from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.',
     privacyPolicyContact: 'Contact Us',
-    privacyPolicyContactP1: `If you have questions or comments about this notice, you may email us at privacy@${appName.toLowerCase()}.com`,
+    privacyPolicyContactP1: `If you have questions or comments about this notice, you may email us at sales@4eyeslearning.com`,
 
     termsOfServiceTitle: 'Terms of Service',
     termsOfServiceLastUpdated: 'Last Updated: {date}',
@@ -170,7 +170,7 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceChanges: '9. Changes to Terms',
     termsOfServiceChangesP1: 'We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will try to provide at least 30 days notice prior to any new terms taking effect.',
     termsOfServiceContact: '10. Contact Us',
-    termsOfServiceContactP1: `If you have any questions about these Terms, please contact us at terms@${appName.toLowerCase()}.com.`,
+    termsOfServiceContactP1: `If you have any questions about these Terms, please contact us at sales@4eyeslearning.com`,
   },
   vn: {
     navFeatures: 'Tính năng',
@@ -225,7 +225,7 @@ export const translations: Record<Locale, AppTranslations> = {
     privacyPolicyChanges: 'Thay đổi chính sách này',
     privacyPolicyChangesP1: 'Chúng tôi có thể cập nhật thông báo bảo mật này theo thời gian. Phiên bản cập nhật sẽ được biểu thị bằng ngày "Cập nhật lần cuối" đã được cập nhật và phiên bản cập nhật sẽ có hiệu lực ngay khi có thể truy cập được.',
     privacyPolicyContact: 'Liên hệ chúng tôi',
-    privacyPolicyContactP1: `Nếu bạn có câu hỏi hoặc nhận xét về thông báo này, bạn có thể gửi email cho chúng tôi tại privacy@${appName.toLowerCase()}.com`,
+    privacyPolicyContactP1: `Nếu bạn có câu hỏi hoặc nhận xét về thông báo này, bạn có thể gửi email cho chúng tôi tại sales@4eyeslearning.com`,
 
     termsOfServiceTitle: 'Điều khoản Dịch vụ',
     termsOfServiceLastUpdated: 'Cập nhật lần cuối: {date}',
@@ -249,6 +249,6 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceChanges: '9. Thay đổi Điều khoản',
     termsOfServiceChangesP1: 'Chúng tôi có quyền, theo quyết định riêng của mình, sửa đổi hoặc thay thế các Điều khoản này bất kỳ lúc nào. Chúng tôi sẽ cố gắng thông báo trước ít nhất 30 ngày trước khi bất kỳ điều khoản mới nào có hiệu lực.',
     termsOfServiceContact: '10. Liên hệ Chúng tôi',
-    termsOfServiceContactP1: `Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản này, vui lòng liên hệ với chúng tôi tại terms@${appName.toLowerCase()}.com.`,
+    termsOfServiceContactP1: `Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản này, vui lòng liên hệ với chúng tôi tại sales@4eyeslearning.com`,
   },
 };
