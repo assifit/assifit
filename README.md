@@ -6,7 +6,23 @@
 
 A modern, responsive landing page for the AssiFit fitness training application built with Next.js and Tailwind CSS. This landing page showcases the app's features, testimonials, and provides download links for the mobile application.
 
-## Tech Stack
+## About AssiFit App
+
+<div align="center">
+  <img src="/public/images/img_hero.png" alt="AssiFit App Screenshot" width="400" />
+</div>
+
+
+AssiFit is a fitness training application that helps users achieve their fitness goals with personalized workout plans and nutrition guidance. The landing page serves as the primary marketing tool for the mobile application.
+
+<div align="center">
+  <a href="https://play.google.com/store/apps/details?id=vn.assifit">
+    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="240" />
+  </a>
+</div>
+
+
+## Landing page tech stack
 
 - **Framework**: Next.js 15.3.3 with Turbopack
 - **Styling**: Tailwind CSS 3.4.1
@@ -27,21 +43,6 @@ A modern, responsive landing page for the AssiFit fitness training application b
 - **SEO Ready**: Structured for good search engine visibility
 - **Accessibility**: Built with accessibility in mind using semantic HTML and ARIA attributes
 - **Legal Pages**: Includes Privacy Policy and Terms of Service pages
-
-## App Information
-
-<div align="center">
-  <img src="/public/images/img_hero.png" alt="AssiFit App Screenshot" width="400" />
-</div>
-
-
-AssiFit is a fitness training application that helps users achieve their fitness goals with personalized workout plans and nutrition guidance. The landing page serves as the primary marketing tool for the mobile application.
-
-<div align="center">
-  <a href="https://play.google.com/store/apps/details?id=vn.assifit">
-    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="240" />
-  </a>
-</div>
 
 
 ### Key Sections
