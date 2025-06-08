@@ -1,6 +1,8 @@
 # AssiFit - Fitness Training App Landing Page
 
-![AssiFit Logo](/public/icons/ic_logo.png)
+<div align="center">
+  <img src="/public/icons/ic_logo.png" alt="AssiFit Logo" width="128" />
+</div>
 
 A modern, responsive landing page for the AssiFit fitness training application built with Next.js and Tailwind CSS. This landing page showcases the app's features, testimonials, and provides download links for the mobile application.
 
@@ -17,10 +19,6 @@ A modern, responsive landing page for the AssiFit fitness training application b
 
 ## Features
 
-<div align="center">
-  <img src="/public/images/img_hero.png" alt="AssiFit App Screenshot" width="400" />
-</div>
-
 - **Responsive Design**: Fully responsive layout that works on mobile, tablet, and desktop devices
 - **Dark/Light Mode**: Theme toggle with high-contrast dark mode
 - **Internationalization**: Support for English and Vietnamese languages
@@ -32,11 +30,19 @@ A modern, responsive landing page for the AssiFit fitness training application b
 
 ## App Information
 
+<div align="center">
+  <img src="/public/images/img_hero.png" alt="AssiFit App Screenshot" width="400" />
+</div>
+
+
 AssiFit is a fitness training application that helps users achieve their fitness goals with personalized workout plans and nutrition guidance. The landing page serves as the primary marketing tool for the mobile application.
 
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=vn.assifit)
+<div align="center">
+  <a href="https://play.google.com/store/apps/details?id=vn.assifit">
+    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="240" />
+  </a>
+</div>
 
-[Download on Google Play](https://play.google.com/store/apps/details?id=vn.assifit)
 
 ### Key Sections
 
@@ -56,7 +62,7 @@ AssiFit is a fitness training application that helps users achieve their fitness
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/assifit/assifit.git
    cd assifit
    ```
 
