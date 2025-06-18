@@ -35,9 +35,6 @@ export default function FeaturesSection() {
   const { t } = useLanguage();
   const featuresData: FeatureContent[] = t.features;
 
-  const leftFeatures = featuresData.slice(0, 2);
-  const rightFeatures = featuresData.slice(2, 4);
-
   // Helper to get the correct icon for a feature based on its original index
   const getIconForFeature = (featureTitle: string) => {
     const originalIndex = featuresData.findIndex(f => f.title === featureTitle);
@@ -50,41 +47,34 @@ export default function FeaturesSection() {
         <h2 className="text-4xl font-bold text-center mb-12 md:mb-16 font-headline text-foreground">
           {t.featuresHeadline}
         </h2>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-12">
-          {/* Left Column for 2 Cards */}
-          <div className="flex flex-col gap-6 md:w-auto order-2 md:order-1 w-full items-center md:items-stretch">
-            {leftFeatures.map((feature) => (
-              <FeatureCard
-                key={feature.title}
-                icon={getIconForFeature(feature.title)}
-                title={feature.title}
-                description={feature.description}
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 lg:gap-12">
+          {/* Left Column - Image */}
+          <div className="w-full md:w-5/12 flex justify-center md:justify-end order-1 mb-8 md:mb-0">
+            <div className="relative">
+              <Image
+                src="/images/img_feature.png"
+                alt="AssiFit Key Features Visual"
+                width={400}
+                height={500}
+                className="rounded-2xl object-cover"
+                style={{ maxHeight: '600px' }}
+                data-ai-hint="abstract fitness tech"
               />
-            ))}
+            </div>
           </div>
 
-          {/* Central Image */}
-          <div className="flex justify-center items-center flex-shrink-0 order-1 md:order-2 my-6 md:my-0">
-            <Image
-              src="/images/img_feature.png"
-              alt="AssiFit Key Features Visual"
-              width={250}
-              height={250}
-              className="rounded-full shadow-2xl"
-              data-ai-hint="abstract fitness tech"
-            />
-          </div>
-
-          {/* Right Column for 2 Cards */}
-          <div className="flex flex-col gap-6 md:w-auto order-3 md:order-3 w-full items-center md:items-stretch">
-            {rightFeatures.map((feature) => (
-              <FeatureCard
-                key={feature.title}
-                icon={getIconForFeature(feature.title)}
-                title={feature.title}
-                description={feature.description}
-              />
-            ))}
+          {/* Right Column - 4 Feature Cards in a Vertical Layout */}
+          <div className="w-full md:w-7/12 order-2">
+            <div className="flex flex-col gap-6">
+              {featuresData.map((feature) => (
+                <FeatureCard
+                  key={feature.title}
+                  icon={getIconForFeature(feature.title)}
+                  title={feature.title}
+                  description={feature.description}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

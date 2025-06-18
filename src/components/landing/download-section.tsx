@@ -9,7 +9,7 @@ export default function DownloadSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-accent text-primary-foreground">
+    <section className="py-16 md:py-24 bg-background text-foreground">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-10 font-headline">
           {t.downloadHeadline}
