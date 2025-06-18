@@ -4,30 +4,42 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%; /* Very Light Cool Gray */
-    --foreground: 210 10% 23%; /* Dark Cool Gray for text */
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 210 10% 23%; /* Dark Cool Gray */
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 23%;
-    --primary: 20 44% 39%; /* New Primary: Rich Brown #8F4C37 */
-    --primary-foreground: 0 0% 100%; /* White - for contrast on new primary */
-    --secondary: 210 40% 90%; /* Light Cool Gray-Blue */
-    --secondary-foreground: 14 74% 36%; /* Darker version of new primary */
-    --muted: 210 40% 92%;
-    --muted-foreground: 210 8% 45%; /* Medium Gray */
-    --accent: 262 80% 58%; /* Vibrant Purple */
-    --accent-foreground: 0 0% 100%; /* White */
-    --destructive: 0 72% 51%; /* Clear Red */
-    --destructive-foreground: 0 0% 100%;
-    --border: 210 20% 88%; /* Light Gray Border */
-    --input: 210 20% 94%; /* Slightly Off-White Input Background */
-    --ring: 14 74% 56%; /* New Primary color for focus rings */
-    --chart-1: 14 74% 56%; /* New Primary Orange-Red */
-    --chart-2: 262 80% 58%; /* Accent Purple */
-    --chart-3: 14 74% 70%; /* Lighter New Primary Orange-Red */
-    --chart-4: 262 70% 75%; /* Lighter Purple */
-    --chart-5: 190 60% 50%; /* Complementary Teal/Cyan */
+    --background: 300 100% 98%; /* #FFF7FE */
+    --foreground: 280 13% 12%; /* #1E1A22 */
+    --card: 300 100% 98%; /* #FFF7FE */
+    --card-foreground: 280 13% 12%; /* #1E1A22 */
+    --popover: 300 100% 98%; /* #FFF7FE */
+    --popover-foreground: 280 13% 12%; /* #1E1A22 */
+    --primary: 270 66% 40%; /* #6A23A9 */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary-container: 270 50% 51%; /* #8441C3 */
+    --on-primary-container: 276 100% 93%; /* #EFD9FF */
+    --secondary: 272 36% 43%; /* #6E5388 */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary-container: 276 100% 88%; /* #E3C2FF */
+    --on-secondary-container: 272 23% 40%; /* #674C81 */
+    --tertiary: 328 74% 32%; /* #8E1662 */
+    --tertiary-foreground: 0 0% 100%; /* #FFFFFF */
+    --tertiary-container: 328 54% 44%; /* #AD337B */
+    --on-tertiary-container: 340 100% 92%; /* #FFD7E7 */
+    --muted: 285 30% 90%; /* Light muted background */
+    --muted-foreground: 280 10% 40%; /* Medium muted text */
+    --accent: 272 36% 43%; /* #6E5388 */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --destructive: 0 74% 42%; /* #BA1A1A */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 285 15% 80%; /* #CFC2D4 */
+    --input: 285 30% 94%; /* Light input background */
+    --ring: 270 66% 40%; /* #6A23A9 */
+    --surface-variant: 285 30% 90%; /* #EBDEF1 */
+    --on-surface-variant: 280 13% 30%; /* #4C4452 */
+    --outline: 285 8% 48%; /* #7D7384 */
+    --outline-variant: 285 15% 80%; /* #CFC2D4 */
+    --chart-1: 270 66% 40%; /* #6A23A9 */
+    --chart-2: 272 36% 43%; /* #6E5388 */
+    --chart-3: 328 74% 32%; /* #8E1662 */
+    --chart-4: 276 100% 88%; /* #E3C2FF */
+    --chart-5: 340 100% 92%; /* #FFD7E7 */
     --radius: 0.75rem; /* Adjusted for Material 3 feel */
 
     --sidebar-background: hsl(var(--background));
@@ -41,30 +53,42 @@
   }
 
   .dark {
-    --background: 222 47% 8%; /* Darker Blue-Gray for higher contrast */
-    --foreground: 0 0% 100%; /* Pure White for maximum contrast */
-    --card: 222 40% 12%; /* Darker card background */
-    --card-foreground: 0 0% 100%; /* Pure White text */
-    --popover: 222 40% 12%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 20 60% 55%; /* Brighter, more saturated brown for dark mode */
-    --primary-foreground: 0 0% 100%; /* Pure White text on primary */
-    --secondary: 222 30% 18%; /* Darker secondary */
-    --secondary-foreground: 0 0% 100%; /* Pure White text on secondary */
-    --muted: 222 30% 15%; /* Darker muted background */
-    --muted-foreground: 210 20% 80%; /* Lighter muted text for better contrast */
-    --accent: 262 90% 70%; /* Brighter accent */
-    --accent-foreground: 0 0% 100%; /* Pure White text on accent */
-    --destructive: 0 80% 50%; /* Brighter red */
-    --destructive-foreground: 0 0% 100%;
-    --border: 222 30% 30%; /* Lighter border for better visibility */
-    --input: 222 30% 16%; /* Darker input background */
-    --ring: 20 60% 55%; /* Match primary color for focus rings */
-    --chart-1: 20 60% 55%; /* Match primary */
-    --chart-2: 262 90% 70%; /* Match accent */
-    --chart-3: 20 60% 75%; /* Lighter primary */
-    --chart-4: 262 90% 85%; /* Lighter accent */
-    --chart-5: 190 80% 60%; /* Brighter teal */
+    --background: 280 15% 8%; /* #161219 */
+    --foreground: 285 25% 90%; /* #E9DFEB */
+    --card: 280 15% 8%; /* #161219 */
+    --card-foreground: 285 25% 90%; /* #E9DFEB */
+    --popover: 280 15% 8%; /* #161219 */
+    --popover-foreground: 285 25% 90%; /* #E9DFEB */
+    --primary: 270 100% 86%; /* #DDB7FF */
+    --primary-foreground: 276 100% 25%; /* #490080 */
+    --primary-container: 270 50% 51%; /* #8441C3 */
+    --on-primary-container: 276 100% 93%; /* #EFD9FF */
+    --secondary: 276 76% 85%; /* #DABAF6 */
+    --secondary-foreground: 272 38% 26%; /* #3E2556 */
+    --secondary-container: 272 23% 33%; /* #553B6E */
+    --on-secondary-container: 272 50% 78%; /* #C8A9E4 */
+    --tertiary: 336 100% 84%; /* #FFAFD4 */
+    --tertiary-foreground: 328 100% 19%; /* #620041 */
+    --tertiary-container: 328 54% 44%; /* #AD337B */
+    --on-tertiary-container: 340 100% 92%; /* #FFD7E7 */
+    --muted: 280 15% 15%; /* Darker muted background */
+    --muted-foreground: 285 15% 80%; /* Lighter muted text */
+    --accent: 276 76% 85%; /* #DABAF6 */
+    --accent-foreground: 272 38% 26%; /* #3E2556 */
+    --destructive: 4 100% 83%; /* #FFB4AB */
+    --destructive-foreground: 357 100% 21%; /* #690005 */
+    --border: 285 10% 60%; /* #988D9E */
+    --input: 280 15% 20%; /* Darker input background */
+    --ring: 270 100% 86%; /* #DDB7FF */
+    --surface-variant: 280 13% 30%; /* #4C4452 */
+    --on-surface-variant: 285 15% 80%; /* #CFC2D4 */
+    --outline: 285 10% 60%; /* #988D9E */
+    --outline-variant: 280 13% 30%; /* #4C4452 */
+    --chart-1: 270 100% 86%; /* #DDB7FF */
+    --chart-2: 276 76% 85%; /* #DABAF6 */
+    --chart-3: 336 100% 84%; /* #FFAFD4 */
+    --chart-4: 272 50% 78%; /* #C8A9E4 */
+    --chart-5: 340 100% 92%; /* #FFD7E7 */
 
     --sidebar-background: hsl(var(--background));
     --sidebar-foreground: hsl(var(--foreground));

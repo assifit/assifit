@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { ThemeAwareLogo } from '@/components/theme-aware-logo';
 import { ThemeToggleButton } from '@/components/theme-toggle-button';
 import { LanguageSwitcher } from '@/components/language-switcher';
 import { useLanguage } from '@/contexts/language-context';
@@ -14,7 +15,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 md:px-6 bg-background/80 backdrop-blur-md shadow-sm">
       <Link href="/" className="flex items-center gap-2" prefetch={false}>
-        <Image src="/icons/ic_logo.png" alt="AssiFit Logo" width={28} height={28} className="h-7 w-7" />
+        <ThemeAwareLogo width={28} height={28} className="h-7 w-7" />
         <span className="text-2xl font-bold font-headline text-primary">{appName}</span>
       </Link>
       <div className="flex items-center space-x-2">
@@ -48,7 +49,7 @@ const Footer = () => {
     <footer className="py-12 bg-muted text-muted-foreground">
       <div className="container mx-auto px-6 text-center">
         <div className="flex justify-center items-center mb-6">
-          <Image src="/icons/ic_logo.png" alt="AssiFit Logo" width={32} height={32} className="h-8 w-8" />
+          <ThemeAwareLogo width={32} height={32} className="h-8 w-8" />
           <span className="ml-2 text-2xl font-bold font-headline text-primary">{appName}</span>
         </div>
         <p className="mb-2">{t.footerSlogan}</p>
@@ -102,7 +103,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-semibold font-headline mb-3">{t.termsOfServiceUserAccounts}</h2>
             <p>{t.termsOfServiceUserAccountsP1.replaceAll('${appName}', appName)}</p>
           </section>
-          
+
           <section className="mb-8">
             <h2 className="text-2xl font-semibold font-headline mb-3">{t.termsOfServiceUserConduct}</h2>
             <p>{t.termsOfServiceUserConductP1.replaceAll('${appName}', appName)}</p>
