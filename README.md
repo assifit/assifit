@@ -124,4 +124,4 @@ SOFTWARE.
 
 ## Contact
 
-For any questions or inquiries, please contact sales@4eyeslearning.com
+For any questions or inquiries, please contact sales.4eyeslearning@gmail.com
