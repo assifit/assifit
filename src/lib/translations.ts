@@ -88,6 +88,38 @@ export interface AppTranslations {
   termsOfServiceChangesP1: string;
   termsOfServiceContact: string;
   termsOfServiceContactP1: string;
+
+  // Delete Account Page
+  deleteAccountTitle: string;
+  deleteAccountIntro: string;
+  deleteAccountBeforeTitle: string;
+  deleteAccountBeforeP1: string;
+  deleteAccountBeforeList: string[];
+  deleteAccountBeforeImportant: string;
+  deleteAccountHowToTitle: string;
+  deleteAccountHowToP1: string;
+  deleteAccountHowToStep1: string;
+  deleteAccountHowToStep2: string;
+  deleteAccountHowToStep3: string;
+  deleteAccountHowToStep3List: string[];
+  deleteAccountWhatDataTitle: string;
+  deleteAccountWhatDataP1: string;
+  deleteAccountWhatDataList: string[];
+  deleteAccountRetentionTitle: string;
+  deleteAccountRetentionP1: string;
+  deleteAccountRetentionItem1: string;
+  deleteAccountRetentionItem2: string;
+  deleteAccountRetentionItem2List: string[];
+  deleteAccountRetentionItem3: string;
+  deleteAccountConfirmationTitle: string;
+  deleteAccountConfirmationP1: string;
+  deleteAccountConfirmationList: string[];
+  deleteAccountAlternativesTitle: string;
+  deleteAccountAlternativesP1: string;
+  deleteAccountAlternativesList: string[];
+  deleteAccountQuestionsTitle: string;
+  deleteAccountQuestionsP1: string;
+  deleteAccountQuestionsP2: string;
 }
 
 export const appName = "AssiFit";
@@ -146,7 +178,7 @@ export const translations: Record<Locale, AppTranslations> = {
     privacyPolicyChanges: 'Changes to This Policy',
     privacyPolicyChangesP1: 'We may update this privacy notice from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.',
     privacyPolicyContact: 'Contact Us',
-    privacyPolicyContactP1: `If you have questions or comments about this notice, you may email us at sales@4eyeslearning.com`,
+    privacyPolicyContactP1: `If you have questions or comments about this notice, you may email us at sales.4eyeslearning@gmail.com`,
 
     termsOfServiceTitle: 'Terms of Service',
     termsOfServiceLastUpdated: 'Last Updated: {date}',
@@ -170,7 +202,65 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceChanges: '9. Changes to Terms',
     termsOfServiceChangesP1: 'We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will try to provide at least 30 days notice prior to any new terms taking effect.',
     termsOfServiceContact: '10. Contact Us',
-    termsOfServiceContactP1: `If you have any questions about these Terms, please contact us at sales@4eyeslearning.com`,
+    termsOfServiceContactP1: `If you have any questions about these Terms, please contact us at sales.4eyeslearning@gmail.com`,
+
+    deleteAccountTitle: 'Account Deletion',
+    deleteAccountIntro: 'We understand that you may want to delete your account. This page explains how to request account deletion and what data will be removed.',
+    deleteAccountBeforeTitle: 'Before You Delete Your Account',
+    deleteAccountBeforeP1: 'Please note that deleting your account is permanent and cannot be undone. When you delete your account:',
+    deleteAccountBeforeList: [
+      'Your profile and account information will be permanently removed',
+      'Your workout history and progress data will be deleted',
+      'Any saved preferences or settings will be lost',
+      'You will no longer be able to access the app with this account'
+    ],
+    deleteAccountBeforeImportant: 'Important: If you have an active subscription, please cancel it before deleting your account to avoid future charges. Deleting your account does not automatically cancel your subscription.',
+    deleteAccountHowToTitle: 'How to Request Account Deletion',
+    deleteAccountHowToP1: 'To delete your account and associated data, please follow these steps:',
+    deleteAccountHowToStep1: 'Send an email to {email}',
+    deleteAccountHowToStep2: 'Use the subject line: "Delete My Account"',
+    deleteAccountHowToStep3: 'Include the following information in your email:',
+    deleteAccountHowToStep3List: [
+      'The email address associated with your account',
+      'Your account username (if applicable)',
+      'Confirmation that you understand this action is permanent'
+    ],
+    deleteAccountWhatDataTitle: 'What Data Will Be Deleted',
+    deleteAccountWhatDataP1: 'When you request account deletion, the following data will be permanently removed:',
+    deleteAccountWhatDataList: [
+      'Account information: Email, username, profile details',
+      'User-generated content: Workout logs, progress photos, notes',
+      'App data: Settings, preferences, and customizations',
+      'Authentication data: Login credentials and tokens'
+    ],
+    deleteAccountRetentionTitle: 'Data Retention',
+    deleteAccountRetentionP1: 'We are committed to processing your deletion request promptly:',
+    deleteAccountRetentionItem1: 'Account deletion: Your account and associated data will be permanently deleted from our systems within 30 days of receiving your request',
+    deleteAccountRetentionItem2: 'Legal requirements: Some data may be retained for up to 90 days to comply with legal obligations, including:',
+    deleteAccountRetentionItem2List: [
+      'Transaction records for accounting purposes',
+      'Data required for fraud prevention and security',
+      'Information necessary to comply with applicable laws and regulations'
+    ],
+    deleteAccountRetentionItem3: 'Backup systems: Data in backup systems may take additional time to be fully removed, but will be inaccessible and scheduled for permanent deletion',
+    deleteAccountConfirmationTitle: 'Confirmation and Timeline',
+    deleteAccountConfirmationP1: 'Once we receive your deletion request:',
+    deleteAccountConfirmationList: [
+      'We will send you a confirmation email within 2-3 business days',
+      'You may be asked to verify your identity to ensure the security of your account',
+      'After verification, your account will be scheduled for deletion',
+      'You will receive a final confirmation once the deletion is complete'
+    ],
+    deleteAccountAlternativesTitle: 'Alternative Options',
+    deleteAccountAlternativesP1: 'If you are not sure about permanently deleting your account, consider these alternatives:',
+    deleteAccountAlternativesList: [
+      'Take a break: You can simply stop using the app without deleting your account',
+      'Clear your data: You can manually delete your workout history and personal information from within the app settings',
+      'Contact support: If you are experiencing issues, our support team may be able to help resolve them'
+    ],
+    deleteAccountQuestionsTitle: 'Questions or Concerns',
+    deleteAccountQuestionsP1: 'If you have any questions about the account deletion process or our data practices, please contact us at {email}.',
+    deleteAccountQuestionsP2: 'For more information about how we handle your data, please review our Privacy Policy.',
   },
   vn: {
     navFeatures: 'Tính năng',
@@ -249,6 +339,64 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceChanges: '9. Thay đổi Điều khoản',
     termsOfServiceChangesP1: 'Chúng tôi có quyền, theo quyết định riêng của mình, sửa đổi hoặc thay thế các Điều khoản này bất kỳ lúc nào. Chúng tôi sẽ cố gắng thông báo trước ít nhất 30 ngày trước khi bất kỳ điều khoản mới nào có hiệu lực.',
     termsOfServiceContact: '10. Liên hệ Chúng tôi',
-    termsOfServiceContactP1: `Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản này, vui lòng liên hệ với chúng tôi tại sales@4eyeslearning.com`,
+    termsOfServiceContactP1: `Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản này, vui lòng liên hệ với chúng tôi tại sales.4eyeslearning@gmail.com`,
+
+    deleteAccountTitle: 'Xóa Tài khoản',
+    deleteAccountIntro: 'Chúng tôi hiểu rằng bạn có thể muốn xóa tài khoản của mình. Trang này giải thích cách yêu cầu xóa tài khoản và dữ liệu nào sẽ bị xóa.',
+    deleteAccountBeforeTitle: 'Trước khi Xóa Tài khoản',
+    deleteAccountBeforeP1: 'Xin lưu ý rằng việc xóa tài khoản là vĩnh viễn và không thể hoàn tác. Khi bạn xóa tài khoản:',
+    deleteAccountBeforeList: [
+      'Hồ sơ và thông tin tài khoản của bạn sẽ bị xóa vĩnh viễn',
+      'Lịch sử tập luyện và dữ liệu tiến độ của bạn sẽ bị xóa',
+      'Mọi tùy chọn hoặc cài đặt đã lưu sẽ bị mất',
+      'Bạn sẽ không thể truy cập ứng dụng với tài khoản này nữa'
+    ],
+    deleteAccountBeforeImportant: 'Quan trọng: Nếu bạn có gói đăng ký đang hoạt động, vui lòng hủy trước khi xóa tài khoản để tránh các khoản phí trong tương lai. Việc xóa tài khoản không tự động hủy đăng ký của bạn.',
+    deleteAccountHowToTitle: 'Cách Yêu cầu Xóa Tài khoản',
+    deleteAccountHowToP1: 'Để xóa tài khoản và dữ liệu liên quan, vui lòng làm theo các bước sau:',
+    deleteAccountHowToStep1: 'Gửi email đến {email}',
+    deleteAccountHowToStep2: 'Sử dụng tiêu đề: "Delete My Account"',
+    deleteAccountHowToStep3: 'Bao gồm các thông tin sau trong email của bạn:',
+    deleteAccountHowToStep3List: [
+      'Địa chỉ email liên kết với tài khoản của bạn',
+      'Tên người dùng của bạn (nếu có)',
+      'Xác nhận rằng bạn hiểu hành động này là vĩnh viễn'
+    ],
+    deleteAccountWhatDataTitle: 'Dữ liệu Nào Sẽ Bị Xóa',
+    deleteAccountWhatDataP1: 'Khi bạn yêu cầu xóa tài khoản, các dữ liệu sau sẽ bị xóa vĩnh viễn:',
+    deleteAccountWhatDataList: [
+      'Thông tin tài khoản: Email, tên người dùng, chi tiết hồ sơ',
+      'Nội dung do người dùng tạo: Nhật ký tập luyện, ảnh tiến độ, ghi chú',
+      'Dữ liệu ứng dụng: Cài đặt, tùy chọn và tùy chỉnh',
+      'Dữ liệu xác thực: Thông tin đăng nhập và token'
+    ],
+    deleteAccountRetentionTitle: 'Lưu giữ Dữ liệu',
+    deleteAccountRetentionP1: 'Chúng tôi cam kết xử lý yêu cầu xóa của bạn một cách nhanh chóng:',
+    deleteAccountRetentionItem1: 'Xóa tài khoản: Tài khoản và dữ liệu liên quan của bạn sẽ bị xóa vĩnh viễn khỏi hệ thống của chúng tôi trong vòng 30 ngày kể từ khi nhận được yêu cầu',
+    deleteAccountRetentionItem2: 'Yêu cầu pháp lý: Một số dữ liệu có thể được lưu giữ tới 90 ngày để tuân thủ các nghĩa vụ pháp lý, bao gồm:',
+    deleteAccountRetentionItem2List: [
+      'Hồ sơ giao dịch cho mục đích kế toán',
+      'Dữ liệu cần thiết để ngăn chặn gian lận và bảo mật',
+      'Thông tin cần thiết để tuân thủ các luật và quy định hiện hành'
+    ],
+    deleteAccountRetentionItem3: 'Hệ thống sao lưu: Dữ liệu trong hệ thống sao lưu có thể mất thêm thời gian để bị xóa hoàn toàn, nhưng sẽ không thể truy cập và được lên lịch xóa vĩnh viễn',
+    deleteAccountConfirmationTitle: 'Xác nhận và Thời gian',
+    deleteAccountConfirmationP1: 'Sau khi chúng tôi nhận được yêu cầu xóa của bạn:',
+    deleteAccountConfirmationList: [
+      'Chúng tôi sẽ gửi email xác nhận trong vòng 2-3 ngày làm việc',
+      'Bạn có thể được yêu cầu xác minh danh tính để đảm bảo an toàn cho tài khoản của bạn',
+      'Sau khi xác minh, tài khoản của bạn sẽ được lên lịch xóa',
+      'Bạn sẽ nhận được xác nhận cuối cùng khi việc xóa hoàn tất'
+    ],
+    deleteAccountAlternativesTitle: 'Các Lựa chọn Thay thế',
+    deleteAccountAlternativesP1: 'Nếu bạn không chắc chắn về việc xóa vĩnh viễn tài khoản của mình, hãy xem xét các lựa chọn thay thế sau:',
+    deleteAccountAlternativesList: [
+      'Nghỉ ngơi: Bạn có thể đơn giản ngừng sử dụng ứng dụng mà không cần xóa tài khoản',
+      'Xóa dữ liệu của bạn: Bạn có thể xóa thủ công lịch sử tập luyện và thông tin cá nhân từ cài đặt ứng dụng',
+      'Liên hệ hỗ trợ: Nếu bạn gặp vấn đề, đội ngũ hỗ trợ của chúng tôi có thể giúp giải quyết'
+    ],
+    deleteAccountQuestionsTitle: 'Câu hỏi hoặc Thắc mắc',
+    deleteAccountQuestionsP1: 'Nếu bạn có bất kỳ câu hỏi nào về quy trình xóa tài khoản hoặc thực tiễn dữ liệu của chúng tôi, vui lòng liên hệ với chúng tôi tại {email}.',
+    deleteAccountQuestionsP2: 'Để biết thêm thông tin về cách chúng tôi xử lý dữ liệu của bạn, vui lòng xem Chính sách Bảo mật của chúng tôi.',
   },
 };
