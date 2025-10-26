@@ -3,6 +3,7 @@
 
 import HeroSection from '@/components/landing/hero-section';
 import FeaturesSection from '@/components/landing/features-section';
+import HowItWorksSection from '@/components/landing/how-it-works-section';
 import TestimonialsSection from '@/components/landing/testimonials-section';
 import DownloadSection from '@/components/landing/download-section';
 import Link from 'next/link';
@@ -27,6 +28,9 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
           <Link href="#features" className="hover:text-primary transition-colors" prefetch={false}>
             {t.navFeatures}
+          </Link>
+          <Link href="#how-it-works" className="hover:text-primary transition-colors" prefetch={false}>
+            {t.howItWorksHeadline}
           </Link>
           <Link href="#testimonials" className="hover:text-primary transition-colors" prefetch={false}>
             {t.navTestimonials}
@@ -81,6 +85,9 @@ export default function LandingPage() {
         <HeroSection />
         <div id="features">
           <FeaturesSection />
+        </div>
+        <div id="how-it-works">
+          <HowItWorksSection />
         </div>
         <div id="testimonials">
           <TestimonialsSection />

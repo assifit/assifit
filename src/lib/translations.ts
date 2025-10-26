@@ -32,6 +32,14 @@ export interface AppTranslations {
   testimonialAgeSuffix: string;
   testimonials: TestimonialContent[];
 
+  // How It Works
+  howItWorksHeadline: string;
+  howItWorksSubheadline: string;
+  howItWorksSteps: Array<{
+    title: string;
+    description: string;
+  }>;
+
   // Download
   downloadHeadline: string;
   downloadSubheadline: string;
@@ -149,6 +157,23 @@ export const translations: Record<Locale, AppTranslations> = {
       { quote: 'Voice support is like having a PT!', author: 'Nam', age: 30 },
       { quote: 'Easy to use app, diverse exercises.', author: 'Hùng', age: 28 },
       { quote: 'Thanks to AssiFit, I’m motivated to exercise daily.', author: 'Mai', age: 32 },
+    ],
+
+    howItWorksHeadline: 'How Does It Work?',
+    howItWorksSubheadline: 'Get started with AssiFit in 3 simple steps',
+    howItWorksSteps: [
+      {
+        title: 'Choose Your Exercise',
+        description: 'Select from Push-ups or Squats and set your target reps'
+      },
+      {
+        title: 'Follow Voice Guidance',
+        description: 'Listen to real-time voice instructions and watch video demonstrations for proper form'
+      },
+      {
+        title: 'Track Your Progress',
+        description: 'Monitor your workout history, view statistics, and celebrate your achievements'
+      }
     ],
 
     downloadHeadline: 'Start Your Journey!',
@@ -286,6 +311,23 @@ export const translations: Record<Locale, AppTranslations> = {
       { quote: 'Voice hỗ trợ như có PT bên cạnh!', author: 'Nam', age: 30 },
       { quote: 'Ứng dụng dễ sử dụng, bài tập đa dạng.', author: 'Hùng', age: 28 },
       { quote: 'Nhờ AssiFit mà mình có động lực tập thể dục mỗi ngày.', author: 'Mai', age: 32 },
+    ],
+
+    howItWorksHeadline: 'Cách Hoạt Động',
+    howItWorksSubheadline: 'Bắt đầu với AssiFit chỉ trong 3 bước đơn giản',
+    howItWorksSteps: [
+      {
+        title: 'Chọn Bài Tập',
+        description: 'Chọn Push-up hoặc Squat và đặt mục tiêu số lần tập của bạn'
+      },
+      {
+        title: 'Làm Theo Hướng Dẫn Voice',
+        description: 'Nghe hướng dẫn bằng giọng nói thời gian thực và xem video minh họa để thực hiện đúng kỹ thuật'
+      },
+      {
+        title: 'Theo Dõi Tiến Độ',
+        description: 'Giám sát lịch sử tập luyện, xem thống kê và ăn mừng thành tích của bạn'
+      }
     ],
 
     downloadHeadline: 'Bắt đầu hành trình của bạn!',

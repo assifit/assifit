@@ -42,9 +42,9 @@ export default function FeaturesSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-primary text-primary-foreground">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 md:mb-16 font-headline text-foreground">
+        <h2 className="text-4xl font-bold text-center mb-12 md:mb-16 font-headline">
           {t.featuresHeadline}
         </h2>
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 lg:gap-12">
