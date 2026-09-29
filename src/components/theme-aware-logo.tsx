@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { asset } from '@/lib/base-path';
 
 interface ThemeAwareLogoProps {
   width?: number;
@@ -26,8 +27,8 @@ export function ThemeAwareLogo({ width = 28, height = 28, className = "" }: Them
   }
 
   const logoSrc = resolvedTheme === 'dark' 
-    ? '/icons/ic_logo_dark.png' 
-    : '/icons/ic_logo.png';
+    ? asset('/icons/ic_logo_dark.png')
+    : asset('/icons/ic_logo.png');
 
   return (
     <Image 

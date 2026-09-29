@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import { asset } from '@/lib/base-path';
 
 export const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=vn.assifit';
 
@@ -19,7 +20,7 @@ export function StoreButton({ className }: StoreButtonProps) {
         className
       )}
     >
-      <Image src="/icons/ic_google_play.png" alt="" width={28} height={28} className="h-7 w-7" />
+      <Image src={asset('/icons/ic_google_play.png')} alt="" width={28} height={28} className="h-7 w-7" />
       <span className="flex flex-col text-left leading-tight">
         <span className="text-[11px] font-medium uppercase tracking-wide opacity-80">Get it on</span>
         <span className="text-lg font-bold">Google Play</span>

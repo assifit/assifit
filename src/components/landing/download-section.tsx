@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/language-context';
+import { asset } from '@/lib/base-path';
 import { StoreButton } from './store-button';
 
 export default function DownloadSection() {
@@ -17,7 +18,7 @@ export default function DownloadSection() {
 
           <div className="relative">
             <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-lg">
-              <Image src="/icons/ic_logo.png" alt="" width={40} height={40} className="h-10 w-10" />
+              <Image src={asset('/icons/ic_logo.png')} alt="" width={40} height={40} className="h-10 w-10" />
             </span>
             <h2 className="mx-auto mt-6 max-w-2xl font-headline text-3xl font-bold leading-tight md:text-5xl">
               {t.downloadHeadline}

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
+import { asset } from '@/lib/base-path';
 import { SectionHeading } from './section-heading';
 
 export default function ShowcaseSection() {
@@ -35,12 +36,12 @@ export default function ShowcaseSection() {
 
           <div className="relative order-1 flex justify-center md:order-2">
             <Image
-              src="/images/img_feature.png"
+              src={asset('/images/img_feature.webp')}
               alt="AssiFit squat workout screen"
               width={420}
-              height={570}
+              height={572}
               sizes="(min-width: 768px) 420px, 80vw"
-              className="relative w-full max-w-xs drop-shadow-2xl md:max-w-sm"
+              className="relative h-auto w-full max-w-xs drop-shadow-2xl md:max-w-sm"
             />
           </div>
         </div>

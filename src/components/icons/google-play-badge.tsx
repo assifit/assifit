@@ -1,5 +1,6 @@
 import { HTMLAttributes } from 'react';
 import Image from 'next/image';
+import { asset } from '@/lib/base-path';
 
 interface GooglePlayBadgeProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -11,7 +12,7 @@ export function GooglePlayBadge({ className, ...props }: GooglePlayBadgeProps) {
       role="button"
       {...props}
     >
-      <Image src="/icons/ic_google_play.png" alt="Google Play" width={24} height={24} className="h-6 w-6" />
+      <Image src={asset('/icons/ic_google_play.png')} alt="Google Play" width={24} height={24} className="h-6 w-6" />
       <div className="flex flex-col">
         <span className="text-xs font-medium">GET IT ON</span>
         <span className="text-base font-bold">Google Play</span>
