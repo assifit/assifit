@@ -22,6 +22,11 @@ export interface TestimonialContent {
   age: number;
 }
 
+export interface ReleaseHighlightContent {
+  title: string;
+  description: string;
+}
+
 export interface AppTranslations {
   // Header
   navFeatures: string;
@@ -29,6 +34,7 @@ export interface AppTranslations {
   navDownload: string;
   navHowItWorks: string;
   navFaq: string;
+  navWhatsNew: string;
   navCta: string;
   navOpenMenu: string;
   languageLabel: string;
@@ -49,6 +55,13 @@ export interface AppTranslations {
   featuresHeadline: string;
   featuresSubheadline: string;
   features: FeatureContent[];
+
+  // What's new (latest release)
+  whatsNewEyebrow: string;
+  whatsNewHeadline: string;
+  whatsNewSubheadline: string;
+  whatsNewVersionLabel: string;
+  whatsNewHighlights: ReleaseHighlightContent[];
 
   // Showcase
   showcaseEyebrow: string;
@@ -182,11 +195,12 @@ export const translations: Record<Locale, AppTranslations> = {
     navDownload: 'Download',
     navHowItWorks: 'How it works',
     navFaq: 'FAQ',
+    navWhatsNew: "What's new",
     navCta: 'Get the app',
     navOpenMenu: 'Open menu',
     languageLabel: 'Language',
 
-    heroBadge: 'AI rep counting with your camera',
+    heroBadge: 'New in v1.0.2: AI Daily Challenges & Badges',
     heroTitleLead: 'Your AI coach,',
     heroTitleHighlight: 'right in your pocket.',
     heroSubheadline: 'AssiFit counts your Push-ups & Squats through the camera, corrects your form in real time and keeps your streak alive every day — no gym required.',
@@ -205,11 +219,24 @@ export const translations: Record<Locale, AppTranslations> = {
     featuresSubheadline: 'A smart assistant that watches your form, counts every rep and keeps you coming back.',
     features: [
       { title: 'AI Pose Detection', description: 'On-device pose detection counts every Push-up and Squat and flags bad form instantly — no more guessing.' },
-      { title: 'Voice Coach', description: 'Real-time voice cues keep your technique on point without looking at the screen.' },
-      { title: 'Streak Challenge', description: 'Work out daily, grow your streak and show it off to friends.' },
-      { title: 'Progress Tracking', description: 'Every rep and session is saved so you can watch yourself improve.' },
+      { title: 'Voice Coach', description: 'Your coach announces sets, counts reps out loud and cheers you on — no need to look at the screen.' },
+      { title: 'AI Daily Challenge', description: 'A fresh challenge every day, tuned to your mood and recent performance. Keep your streak alive!' },
+      { title: 'Progress & Badges', description: 'Track every rep with your Performance Index and unlock badges as you hit new milestones.' },
       { title: 'Daily Reminders', description: 'Set your schedule and get a nudge so you never miss a session.' },
       { title: 'Share Your Wins', description: 'Share your rep photos with friends via SMS or email.' },
+    ],
+
+    whatsNewEyebrow: "What's new",
+    whatsNewHeadline: 'Meet your smarter AI coach',
+    whatsNewSubheadline: 'Version 1.0.2 turns AssiFit into a coach that adapts to you every single day.',
+    whatsNewVersionLabel: 'Version 1.0.2',
+    whatsNewHighlights: [
+      { title: 'Mood check-in', description: 'Tell AssiFit how you feel — full of energy, so-so or tired — and today’s plan adjusts to match.' },
+      { title: 'AI Daily Challenge', description: 'A personalised Push-up or Squat challenge every day, based on your mood and recent workouts.' },
+      { title: 'Performance Index', description: 'One simple score that combines your reps, form quality and consistency so you can see real progress.' },
+      { title: 'Voice Coach', description: 'Spoken announcements for every set, rep count and finish line keep you focused while you train.' },
+      { title: 'Badges & Gallery', description: 'Unlock 18 badges for streaks, perfect form, completed challenges and more — then show them off in your gallery.' },
+      { title: 'Faster & more secure', description: 'Support for the latest Android versions, a smoother camera experience and stronger data protection.' },
     ],
 
     showcaseEyebrow: 'Guided workouts',
@@ -254,6 +281,7 @@ export const translations: Record<Locale, AppTranslations> = {
     faqHeadline: 'Frequently asked questions',
     faqs: [
       { question: 'Do I need any equipment?', answer: 'No. Push-ups and Squats only need your body weight and a phone to track you.' },
+      { question: 'How does the AI Daily Challenge work?', answer: 'Each day you pick your mood, and AssiFit combines it with your recent performance to set a challenge that pushes you without burning you out.' },
       { question: 'How does AssiFit count my reps?', answer: 'AssiFit uses ML Kit pose detection on your phone’s camera to recognise your movement, count each rep and give feedback on your form.' },
       { question: 'Is my camera video uploaded anywhere?', answer: 'Pose detection runs on your device. Photos are only shared when you choose to share them.' },
       { question: 'Which devices are supported?', answer: 'AssiFit is currently available on Android via Google Play.' },
@@ -261,7 +289,7 @@ export const translations: Record<Locale, AppTranslations> = {
 
     downloadHeadline: 'Ready for your first rep?',
     downloadSubheadline: `Download ${appName} today and discover a new, effective and convenient way to work out.`,
-    downloadNote: 'Available now on Android',
+    downloadNote: 'Version 1.0.2 · Available now on Android',
 
     footerSlogan: `Your Fitness Assistant.`,
     footerCopyright: `© {year} ${appName}. All rights reserved.`,
@@ -383,11 +411,12 @@ export const translations: Record<Locale, AppTranslations> = {
     navDownload: 'Tải về',
     navHowItWorks: 'Cách hoạt động',
     navFaq: 'Hỏi đáp',
+    navWhatsNew: 'Có gì mới',
     navCta: 'Tải app',
     navOpenMenu: 'Mở menu',
     languageLabel: 'Ngôn ngữ',
 
-    heroBadge: 'AI đếm rep qua camera',
+    heroBadge: 'Mới trong v1.0.2: Thử thách AI & Huy hiệu',
     heroTitleLead: 'Huấn luyện viên AI,',
     heroTitleHighlight: 'ngay trong túi bạn.',
     heroSubheadline: 'AssiFit đếm Push-up & Squat qua camera, sửa tư thế theo thời gian thực và giúp bạn giữ streak mỗi ngày — không cần phòng gym.',
@@ -406,11 +435,24 @@ export const translations: Record<Locale, AppTranslations> = {
     featuresSubheadline: 'Trợ lý thông minh theo dõi tư thế, đếm từng rep và giữ lửa cho bạn mỗi ngày.',
     features: [
       { title: 'AI nhận diện tư thế', description: 'Nhận diện tư thế ngay trên thiết bị, tự đếm từng Push-up, Squat và cảnh báo khi sai kỹ thuật.' },
-      { title: 'Voice hỗ trợ', description: 'Hướng dẫn bằng giọng nói theo thời gian thực, không cần nhìn màn hình vẫn tập đúng.' },
-      { title: 'Thử thách Streak', description: 'Tập mỗi ngày, nối dài chuỗi streak và khoe với bạn bè.' },
-      { title: 'Theo dõi tiến độ', description: 'Lưu lại từng rep, từng buổi tập để bạn thấy mình tiến bộ.' },
+      { title: 'Voice Coach', description: 'Huấn luyện viên đọc to từng hiệp, đếm rep và cổ vũ bạn — không cần nhìn màn hình.' },
+      { title: 'Thử thách AI mỗi ngày', description: 'Mỗi ngày một thử thách mới, phù hợp với tâm trạng và phong độ gần đây của bạn. Giữ chuỗi streak không đứt!' },
+      { title: 'Tiến độ & Huy hiệu', description: 'Theo dõi từng rep qua Chỉ số Phong độ và mở khoá huy hiệu mỗi khi đạt cột mốc mới.' },
       { title: 'Nhắc nhở hàng ngày', description: 'Đặt lịch tập và nhận thông báo để không bỏ lỡ buổi nào.' },
       { title: 'Chia sẻ thành tích', description: 'Gửi ảnh rep cho bạn bè qua SMS hoặc Email.' },
+    ],
+
+    whatsNewEyebrow: 'Có gì mới',
+    whatsNewHeadline: 'Gặp gỡ huấn luyện viên AI thông minh hơn',
+    whatsNewSubheadline: 'Phiên bản 1.0.2 biến AssiFit thành huấn luyện viên thích nghi với bạn mỗi ngày.',
+    whatsNewVersionLabel: 'Phiên bản 1.0.2',
+    whatsNewHighlights: [
+      { title: 'Chọn tâm trạng', description: 'Cho AssiFit biết bạn đang tràn năng lượng, bình thường hay mệt — kế hoạch hôm nay sẽ tự điều chỉnh.' },
+      { title: 'Thử thách AI mỗi ngày', description: 'Thử thách Push-up hoặc Squat cá nhân hoá mỗi ngày, dựa trên tâm trạng và các buổi tập gần đây.' },
+      { title: 'Chỉ số Phong độ', description: 'Một điểm số đơn giản kết hợp số rep, chất lượng tư thế và sự đều đặn để bạn thấy mình tiến bộ thật sự.' },
+      { title: 'Voice Coach', description: 'Giọng nói thông báo từng hiệp, số rep và lúc về đích giúp bạn tập trung khi tập.' },
+      { title: 'Huy hiệu & Bộ sưu tập', description: 'Mở khoá 18 huy hiệu cho streak, tư thế chuẩn, thử thách hoàn thành và hơn thế nữa — rồi khoe trong bộ sưu tập.' },
+      { title: 'Nhanh hơn & an toàn hơn', description: 'Hỗ trợ các phiên bản Android mới nhất, camera mượt hơn và bảo vệ dữ liệu tốt hơn.' },
     ],
 
     showcaseEyebrow: 'Bài tập có hướng dẫn',
@@ -455,6 +497,7 @@ export const translations: Record<Locale, AppTranslations> = {
     faqHeadline: 'Câu hỏi thường gặp',
     faqs: [
       { question: 'Tôi có cần dụng cụ gì không?', answer: 'Không. Push-up và Squat chỉ cần trọng lượng cơ thể và một chiếc điện thoại để theo dõi.' },
+      { question: 'Thử thách AI mỗi ngày hoạt động thế nào?', answer: 'Mỗi ngày bạn chọn tâm trạng, AssiFit kết hợp với phong độ gần đây để đặt ra thử thách vừa sức — đủ để tiến bộ mà không quá tải.' },
       { question: 'AssiFit đếm rep bằng cách nào?', answer: 'AssiFit dùng ML Kit Pose Detection trên camera điện thoại để nhận diện chuyển động, đếm từng rep và phản hồi về tư thế.' },
       { question: 'Video từ camera có bị tải lên đâu không?', answer: 'Việc nhận diện tư thế chạy ngay trên thiết bị. Ảnh chỉ được chia sẻ khi bạn chủ động chia sẻ.' },
       { question: 'AssiFit hỗ trợ thiết bị nào?', answer: 'Hiện tại AssiFit có trên Android qua Google Play.' },
@@ -462,7 +505,7 @@ export const translations: Record<Locale, AppTranslations> = {
 
     downloadHeadline: 'Sẵn sàng cho rep đầu tiên?',
     downloadSubheadline: `Tải ${appName} ngay hôm nay và khám phá một phương pháp tập luyện mới, hiệu quả và tiện lợi.`,
-    downloadNote: 'Đã có trên Android',
+    downloadNote: 'Phiên bản 1.0.2 · Đã có trên Android',
 
     footerSlogan: `Trợ lý luyện tập của bạn.`,
     footerCopyright: `© {year} ${appName}. Mọi quyền được bảo lưu.`,

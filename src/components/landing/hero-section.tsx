@@ -20,10 +20,14 @@ export default function HeroSection() {
       <div className="container relative mx-auto grid items-center gap-14 px-6 lg:grid-cols-2 lg:gap-8">
         {/* Copy */}
         <div className="text-center lg:text-left">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
+          <Link
+            href="#whats-new"
+            prefetch={false}
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/15"
+          >
             <Sparkles className="h-4 w-4" />
             {t.heroBadge}
-          </span>
+          </Link>
           <h1 className="mt-6 font-headline text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl xl:text-6xl">
             <span className="block">{t.heroTitleLead}</span>
             <span className="text-gradient block italic">{t.heroTitleHighlight}</span>
