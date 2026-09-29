@@ -1,81 +1,60 @@
+"use client";
 
-"use client"; // Using useLanguage hook
-
-import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
-import { Home, Mic, BarChart3, Bell } from 'lucide-react';
-import type { LucideProps } from 'lucide-react';
-import type { FeatureContent } from '@/lib/translations';
+import { BarChart3, Bell, Flame, Mic, ScanLine, Share2 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
+import { cn } from '@/lib/utils';
+import { SectionHeading } from './section-heading';
 
-interface FeatureCardProps {
-  icon: React.ComponentType<LucideProps>;
-  title: string;
-  description: string;
-  iconStrokeWidth?: number;
-}
-
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, iconStrokeWidth = 1.5 }) => {
-  return (
-    <Card className="bg-card border border-border/50 shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 w-full md:max-w-xs">
-      <CardContent className="flex items-start gap-3 p-4">
-        <Icon className="w-6 h-6 text-primary mt-0.5 flex-shrink-0" strokeWidth={iconStrokeWidth} />
-        <div>
-          <h3 className="font-headline text-lg text-foreground mb-1">{title}</h3>
-          <p className="text-muted-foreground text-sm">{description}</p>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
-
-const featureIcons = [Home, Mic, BarChart3, Bell]; 
+// Order matches t.features
+const featureIcons: LucideIcon[] = [ScanLine, Mic, Flame, BarChart3, Bell, Share2];
 
 export default function FeaturesSection() {
   const { t } = useLanguage();
-  const featuresData: FeatureContent[] = t.features;
-
-  // Helper to get the correct icon for a feature based on its original index
-  const getIconForFeature = (featureTitle: string) => {
-    const originalIndex = featuresData.findIndex(f => f.title === featureTitle);
-    return featureIcons[originalIndex] || Home; // Fallback to Home icon
-  };
 
   return (
-    <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+    <section id="features" className="py-20 md:py-28">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 md:mb-16 font-headline">
-          {t.featuresHeadline}
-        </h2>
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 lg:gap-12">
-          {/* Left Column - Image */}
-          <div className="w-full md:w-5/12 flex justify-center md:justify-end order-1 mb-8 md:mb-0">
-            <div className="relative">
-              <Image
-                src="/images/img_feature.png"
-                alt="AssiFit Key Features Visual"
-                width={400}
-                height={500}
-                className="rounded-2xl object-cover"
-                style={{ maxHeight: '600px' }}
-                data-ai-hint="abstract fitness tech"
-              />
-            </div>
-          </div>
+        <SectionHeading eyebrow={t.featuresEyebrow} title={t.featuresHeadline} subtitle={t.featuresSubheadline} />
 
-          {/* Right Column - 4 Feature Cards in a Vertical Layout */}
-          <div className="w-full md:w-7/12 order-2">
-            <div className="flex flex-col gap-6">
-              {featuresData.map((feature) => (
-                <FeatureCard
-                  key={feature.title}
-                  icon={getIconForFeature(feature.title)}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              ))}
-            </div>
-          </div>
+        <div className="mx-auto mt-14 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {t.features.map((feature, index) => {
+            const Icon = featureIcons[index] ?? ScanLine;
+            const highlighted = index === 0;
+            // Last card spans the full row on desktop so the bento grid has no gaps
+            const wide = index === t.features.length - 1;
+            return (
+              <article
+                key={feature.title}
+                className={cn(
+                  'group relative overflow-hidden rounded-3xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl',
+                  highlighted
+                    ? 'border-transparent bg-brand-gradient text-white shadow-lg shadow-primary/20 sm:col-span-2 lg:col-span-1 lg:row-span-2'
+                    : 'border-border/50 bg-card hover:border-primary/40 hover:shadow-primary/10',
+                  wide && 'sm:col-span-2 lg:col-span-3 lg:flex lg:items-center lg:gap-6'
+                )}
+              >
+                <div
+                  className={cn(
+                    'mb-5 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl',
+                    highlighted ? 'bg-white/15' : 'bg-primary/10 text-primary',
+                    wide && 'lg:mb-0'
+                  )}
+                >
+                  <Icon className="h-6 w-6" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <h3 className={cn('font-headline font-bold', highlighted ? 'text-2xl' : 'text-lg')}>{feature.title}</h3>
+                  <p className={cn('mt-2 leading-relaxed', highlighted ? 'text-white/85 lg:text-lg' : 'text-muted-foreground')}>
+                    {feature.description}
+                  </p>
+                </div>
+                {highlighted && (
+                  <div aria-hidden className="pointer-events-none absolute -bottom-16 -right-16 h-56 w-56 rounded-full border-[24px] border-white/10" />
+                )}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

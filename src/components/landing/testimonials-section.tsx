@@ -1,41 +1,44 @@
-
 "use client";
 
-import { Card, CardContent } from '@/components/ui/card';
+import { Quote, Star } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
-import { Quote } from 'lucide-react';
+import { SectionHeading } from './section-heading';
 
 export default function TestimonialsSection() {
   const { t } = useLanguage();
-  const testimonials = t.testimonials;
 
   return (
-    <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+    <section id="testimonials" className="bg-muted/40 py-20 md:py-28">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 font-headline">
-          {t.testimonialsHeadline}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="bg-background text-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 border-none"
+        <SectionHeading eyebrow={t.testimonialsEyebrow} title={t.testimonialsHeadline} />
+
+        <div className="mx-auto mt-14 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {t.testimonials.map((testimonial) => (
+            <figure
+              key={testimonial.author}
+              className="flex flex-col rounded-3xl border border-border/50 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <CardContent className="pt-6 pb-6 px-6 flex flex-col h-full">
-                <Quote className="w-8 h-8 text-primary mb-3 opacity-50" />
-                <blockquote className="text-base italic mb-4 flex-grow">
-                  {testimonial.quote}
-                </blockquote>
-                <div className="mt-auto pt-4 border-t border-border">
-                  <p className="font-semibold text-sm">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    {testimonial.age} {t.testimonialAgeSuffix}
-                  </p>
+              <div className="flex items-center justify-between">
+                <div className="flex gap-0.5 text-amber-400" aria-hidden>
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-current" />
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
+                <Quote className="h-6 w-6 text-primary/30" />
+              </div>
+              <blockquote className="mt-5 flex-grow text-lg font-medium leading-snug">“{testimonial.quote}”</blockquote>
+              <figcaption className="mt-6 flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-gradient font-bold text-white">
+                  {testimonial.author.charAt(0)}
+                </span>
+                <span>
+                  <span className="block font-semibold">{testimonial.author}</span>
+                  <span className="block text-sm text-muted-foreground">
+                    {testimonial.age} {t.testimonialAgeSuffix}
+                  </span>
+                </span>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>
