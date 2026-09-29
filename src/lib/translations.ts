@@ -6,6 +6,16 @@ export interface FeatureContent {
   description: string;
 }
 
+export interface StatContent {
+  value: string;
+  label: string;
+}
+
+export interface FaqContent {
+  question: string;
+  answer: string;
+}
+
 export interface TestimonialContent {
   quote: string;
   author: string;
@@ -17,22 +27,43 @@ export interface AppTranslations {
   navFeatures: string;
   navTestimonials: string;
   navDownload: string;
+  navHowItWorks: string;
+  navFaq: string;
+  navCta: string;
+  navOpenMenu: string;
   languageLabel: string;
 
   // Hero
-  heroHeadline: string;
+  heroBadge: string;
+  heroTitleLead: string;
+  heroTitleHighlight: string;
   heroSubheadline: string;
+  heroSecondaryCta: string;
+  heroStats: StatContent[];
+  heroChipReps: string;
+  heroChipForm: string;
+  heroChipStreak: string;
 
   // Features
+  featuresEyebrow: string;
   featuresHeadline: string;
+  featuresSubheadline: string;
   features: FeatureContent[];
 
+  // Showcase
+  showcaseEyebrow: string;
+  showcaseHeadline: string;
+  showcaseDescription: string;
+  showcasePoints: string[];
+
   // Testimonials
+  testimonialsEyebrow: string;
   testimonialsHeadline: string;
   testimonialAgeSuffix: string;
   testimonials: TestimonialContent[];
 
   // How It Works
+  howItWorksEyebrow: string;
   howItWorksHeadline: string;
   howItWorksSubheadline: string;
   howItWorksSteps: Array<{
@@ -40,15 +71,24 @@ export interface AppTranslations {
     description: string;
   }>;
 
+  // FAQ
+  faqEyebrow: string;
+  faqHeadline: string;
+  faqs: FaqContent[];
+
   // Download
   downloadHeadline: string;
   downloadSubheadline: string;
+  downloadNote: string;
 
   // Footer
   footerSlogan: string;
   footerCopyright: string;
   footerPrivacy: string;
   footerTerms: string;
+  footerDeleteAccount: string;
+  footerProduct: string;
+  footerLegal: string;
 
   // Privacy Policy Page
   privacyPolicyTitle: string;
@@ -137,20 +177,50 @@ export const translations: Record<Locale, AppTranslations> = {
     navFeatures: 'Features',
     navTestimonials: 'Reviews',
     navDownload: 'Download',
+    navHowItWorks: 'How it works',
+    navFaq: 'FAQ',
+    navCta: 'Get the app',
+    navOpenMenu: 'Open menu',
     languageLabel: 'Language',
 
-    heroHeadline: `AssiFit Your Fitness Assistant`,
-    heroSubheadline: 'Home workouts with Push-ups & Squats, featuring voice assistance and video guides.',
+    heroBadge: 'AI rep counting with your camera',
+    heroTitleLead: 'Your AI coach,',
+    heroTitleHighlight: 'right in your pocket.',
+    heroSubheadline: 'AssiFit counts your Push-ups & Squats through the camera, corrects your form in real time and keeps your streak alive every day — no gym required.',
+    heroSecondaryCta: 'See how it works',
+    heroStats: [
+      { value: 'Real-time', label: 'form feedback' },
+      { value: '5 min', label: 'a day is enough' },
+      { value: '0', label: 'equipment needed' },
+    ],
+    heroChipReps: 'Rep 12 / 15',
+    heroChipForm: 'Great form!',
+    heroChipStreak: '7-day streak',
 
-    featuresHeadline: 'Key Features',
+    featuresEyebrow: 'Features',
+    featuresHeadline: 'Everything you need to train at home',
+    featuresSubheadline: 'A smart assistant that watches your form, counts every rep and keeps you coming back.',
     features: [
-      { title: 'Workout at Home', description: 'Effective workouts anytime, anywhere, no gym needed.' },
-      { title: 'Voice Support', description: 'Detailed voice guidance to ensure correct technique.' },
-      { title: 'Progress Tracking', description: 'Record and analyze workout results, motivating you daily.' },
-      { title: 'Daily Reminders', description: 'Set workout schedules and receive notifications to never miss a session.' },
+      { title: 'AI Pose Detection', description: 'On-device pose detection counts every Push-up and Squat and flags bad form instantly — no more guessing.' },
+      { title: 'Voice Coach', description: 'Real-time voice cues keep your technique on point without looking at the screen.' },
+      { title: 'Streak Challenge', description: 'Work out daily, grow your streak and show it off to friends.' },
+      { title: 'Progress Tracking', description: 'Every rep and session is saved so you can watch yourself improve.' },
+      { title: 'Daily Reminders', description: 'Set your schedule and get a nudge so you never miss a session.' },
+      { title: 'Share Your Wins', description: 'Share your rep photos with friends via SMS or email.' },
     ],
 
-    testimonialsHeadline: 'What Users Say About AssiFit?',
+    showcaseEyebrow: 'Guided workouts',
+    showcaseHeadline: 'Correct form on every single rep',
+    showcaseDescription: 'Pick an exercise, prop up your phone and start. AssiFit guides you with video and voice while the camera tracks your movement.',
+    showcasePoints: [
+      'Video demos for each exercise',
+      'Clear sets × reps targets',
+      'Time and calories at a glance',
+      'Front or back camera, your choice',
+    ],
+
+    testimonialsEyebrow: 'Reviews',
+    testimonialsHeadline: 'What users say about AssiFit',
     testimonialAgeSuffix: 'years old',
     testimonials: [
       { quote: 'Workout 5 minutes a day, feel healthier!', author: 'Lan', age: 25 },
@@ -159,30 +229,44 @@ export const translations: Record<Locale, AppTranslations> = {
       { quote: 'Thanks to AssiFit, I’m motivated to exercise daily.', author: 'Mai', age: 32 },
     ],
 
-    howItWorksHeadline: 'How Does It Work?',
-    howItWorksSubheadline: 'Get started with AssiFit in 3 simple steps',
+    howItWorksEyebrow: 'How it works',
+    howItWorksHeadline: 'Start in 3 simple steps',
+    howItWorksSubheadline: 'From download to your first rep in under a minute.',
     howItWorksSteps: [
       {
-        title: 'Choose Your Exercise',
-        description: 'Select from Push-ups or Squats and set your target reps'
+        title: 'Choose your exercise',
+        description: 'Pick Push-ups or Squats and set your target reps.'
       },
       {
-        title: 'Follow Voice Guidance',
-        description: 'Listen to real-time voice instructions and watch video demonstrations for proper form'
+        title: 'Train with AI & voice',
+        description: 'Place your phone, follow the voice cues and let the camera count your reps.'
       },
       {
-        title: 'Track Your Progress',
-        description: 'Monitor your workout history, view statistics, and celebrate your achievements'
+        title: 'Track & keep your streak',
+        description: 'Review your history, celebrate milestones and keep the streak going.'
       }
     ],
 
-    downloadHeadline: 'Start Your Journey!',
-    downloadSubheadline: `Download ${appName} today and discover a new, effective, and convenient way to work out.`,
+    faqEyebrow: 'FAQ',
+    faqHeadline: 'Frequently asked questions',
+    faqs: [
+      { question: 'Do I need any equipment?', answer: 'No. Push-ups and Squats only need your body weight and a phone to track you.' },
+      { question: 'How does AssiFit count my reps?', answer: 'AssiFit uses ML Kit pose detection on your phone’s camera to recognise your movement, count each rep and give feedback on your form.' },
+      { question: 'Is my camera video uploaded anywhere?', answer: 'Pose detection runs on your device. Photos are only shared when you choose to share them.' },
+      { question: 'Which devices are supported?', answer: 'AssiFit is currently available on Android via Google Play.' },
+    ],
+
+    downloadHeadline: 'Ready for your first rep?',
+    downloadSubheadline: `Download ${appName} today and discover a new, effective and convenient way to work out.`,
+    downloadNote: 'Available now on Android',
 
     footerSlogan: `Your Fitness Assistant.`,
     footerCopyright: `© {year} ${appName}. All rights reserved.`,
     footerPrivacy: 'Privacy Policy',
     footerTerms: 'Terms of Service',
+    footerDeleteAccount: 'Delete account',
+    footerProduct: 'Product',
+    footerLegal: 'Legal',
 
     privacyPolicyTitle: 'Privacy Policy',
     privacyPolicyLastUpdated: 'Last Updated: {date}',
@@ -291,20 +375,50 @@ export const translations: Record<Locale, AppTranslations> = {
     navFeatures: 'Tính năng',
     navTestimonials: 'Đánh giá',
     navDownload: 'Tải về',
+    navHowItWorks: 'Cách hoạt động',
+    navFaq: 'Hỏi đáp',
+    navCta: 'Tải app',
+    navOpenMenu: 'Mở menu',
     languageLabel: 'Ngôn ngữ',
 
-    heroHeadline: `AssiFit Trợ lý Luyện tập Của Bạn`,
-    heroSubheadline: 'Tập luyện tại nhà với Push-up & Squat, có voice hỗ trợ và video hướng dẫn.',
+    heroBadge: 'AI đếm rep qua camera',
+    heroTitleLead: 'Huấn luyện viên AI,',
+    heroTitleHighlight: 'ngay trong túi bạn.',
+    heroSubheadline: 'AssiFit đếm Push-up & Squat qua camera, sửa tư thế theo thời gian thực và giúp bạn giữ streak mỗi ngày — không cần phòng gym.',
+    heroSecondaryCta: 'Xem cách hoạt động',
+    heroStats: [
+      { value: 'Real-time', label: 'phản hồi tư thế' },
+      { value: '5 phút', label: 'mỗi ngày là đủ' },
+      { value: '0', label: 'dụng cụ cần thiết' },
+    ],
+    heroChipReps: 'Rep 12 / 15',
+    heroChipForm: 'Tư thế chuẩn!',
+    heroChipStreak: 'Streak 7 ngày',
 
-    featuresHeadline: 'Tính năng nổi bật',
+    featuresEyebrow: 'Tính năng',
+    featuresHeadline: 'Mọi thứ bạn cần để tập tại nhà',
+    featuresSubheadline: 'Trợ lý thông minh theo dõi tư thế, đếm từng rep và giữ lửa cho bạn mỗi ngày.',
     features: [
-      { title: 'Tập ngay tại nhà', description: 'Luyện tập hiệu quả mọi lúc mọi nơi mà không cần đến phòng gym.' },
-      { title: 'Voice hỗ trợ', description: 'Hướng dẫn bằng giọng nói chi tiết, giúp bạn thực hiện đúng kỹ thuật.' },
-      { title: 'Theo dõi tiến độ', description: 'Ghi nhận và phân tích kết quả luyện tập, tạo động lực mỗi ngày.' },
-      { title: 'Nhắc nhở hàng ngày', description: 'Thiết lập lịch tập và nhận thông báo để không bỏ lỡ buổi tập nào.' },
+      { title: 'AI nhận diện tư thế', description: 'Nhận diện tư thế ngay trên thiết bị, tự đếm từng Push-up, Squat và cảnh báo khi sai kỹ thuật.' },
+      { title: 'Voice hỗ trợ', description: 'Hướng dẫn bằng giọng nói theo thời gian thực, không cần nhìn màn hình vẫn tập đúng.' },
+      { title: 'Thử thách Streak', description: 'Tập mỗi ngày, nối dài chuỗi streak và khoe với bạn bè.' },
+      { title: 'Theo dõi tiến độ', description: 'Lưu lại từng rep, từng buổi tập để bạn thấy mình tiến bộ.' },
+      { title: 'Nhắc nhở hàng ngày', description: 'Đặt lịch tập và nhận thông báo để không bỏ lỡ buổi nào.' },
+      { title: 'Chia sẻ thành tích', description: 'Gửi ảnh rep cho bạn bè qua SMS hoặc Email.' },
     ],
 
-    testimonialsHeadline: 'Người dùng nói gì về AssiFit?',
+    showcaseEyebrow: 'Bài tập có hướng dẫn',
+    showcaseHeadline: 'Đúng tư thế trong từng rep',
+    showcaseDescription: 'Chọn bài tập, dựng điện thoại và bắt đầu. AssiFit hướng dẫn bằng video và giọng nói trong khi camera theo dõi chuyển động của bạn.',
+    showcasePoints: [
+      'Video minh hoạ cho từng bài tập',
+      'Mục tiêu sets × reps rõ ràng',
+      'Thời gian và calo luôn trong tầm mắt',
+      'Dùng camera trước hoặc sau tuỳ ý',
+    ],
+
+    testimonialsEyebrow: 'Đánh giá',
+    testimonialsHeadline: 'Người dùng nói gì về AssiFit',
     testimonialAgeSuffix: 'tuổi',
     testimonials: [
       { quote: 'Tập 5 phút mỗi ngày, thấy khỏe hơn!', author: 'Lan', age: 25 },
@@ -313,30 +427,44 @@ export const translations: Record<Locale, AppTranslations> = {
       { quote: 'Nhờ AssiFit mà mình có động lực tập thể dục mỗi ngày.', author: 'Mai', age: 32 },
     ],
 
-    howItWorksHeadline: 'Cách Hoạt Động',
-    howItWorksSubheadline: 'Bắt đầu với AssiFit chỉ trong 3 bước đơn giản',
+    howItWorksEyebrow: 'Cách hoạt động',
+    howItWorksHeadline: 'Bắt đầu chỉ với 3 bước',
+    howItWorksSubheadline: 'Từ lúc tải app đến rep đầu tiên chưa tới một phút.',
     howItWorksSteps: [
       {
-        title: 'Chọn Bài Tập',
-        description: 'Chọn Push-up hoặc Squat và đặt mục tiêu số lần tập của bạn'
+        title: 'Chọn bài tập',
+        description: 'Chọn Push-up hoặc Squat và đặt mục tiêu số lần tập.'
       },
       {
-        title: 'Làm Theo Hướng Dẫn Voice',
-        description: 'Nghe hướng dẫn bằng giọng nói thời gian thực và xem video minh họa để thực hiện đúng kỹ thuật'
+        title: 'Tập cùng AI & voice',
+        description: 'Dựng điện thoại, nghe hướng dẫn và để camera tự đếm rep cho bạn.'
       },
       {
-        title: 'Theo Dõi Tiến Độ',
-        description: 'Giám sát lịch sử tập luyện, xem thống kê và ăn mừng thành tích của bạn'
+        title: 'Theo dõi & giữ streak',
+        description: 'Xem lịch sử, ăn mừng cột mốc và giữ chuỗi streak không đứt.'
       }
     ],
 
-    downloadHeadline: 'Bắt đầu hành trình của bạn!',
-    downloadSubheadline: `Tải ${appName} ngay hôm nay và khám phá một phương pháp tập luyện mới, hiệu quả và tiện lợi.`,
+    faqEyebrow: 'Hỏi đáp',
+    faqHeadline: 'Câu hỏi thường gặp',
+    faqs: [
+      { question: 'Tôi có cần dụng cụ gì không?', answer: 'Không. Push-up và Squat chỉ cần trọng lượng cơ thể và một chiếc điện thoại để theo dõi.' },
+      { question: 'AssiFit đếm rep bằng cách nào?', answer: 'AssiFit dùng ML Kit Pose Detection trên camera điện thoại để nhận diện chuyển động, đếm từng rep và phản hồi về tư thế.' },
+      { question: 'Video từ camera có bị tải lên đâu không?', answer: 'Việc nhận diện tư thế chạy ngay trên thiết bị. Ảnh chỉ được chia sẻ khi bạn chủ động chia sẻ.' },
+      { question: 'AssiFit hỗ trợ thiết bị nào?', answer: 'Hiện tại AssiFit có trên Android qua Google Play.' },
+    ],
 
-    footerSlogan: `Your Fitness Assistant.`,
+    downloadHeadline: 'Sẵn sàng cho rep đầu tiên?',
+    downloadSubheadline: `Tải ${appName} ngay hôm nay và khám phá một phương pháp tập luyện mới, hiệu quả và tiện lợi.`,
+    downloadNote: 'Đã có trên Android',
+
+    footerSlogan: `Trợ lý luyện tập của bạn.`,
     footerCopyright: `© {year} ${appName}. Mọi quyền được bảo lưu.`,
     footerPrivacy: 'Chính sách Bảo mật',
     footerTerms: 'Điều khoản Dịch vụ',
+    footerDeleteAccount: 'Xoá tài khoản',
+    footerProduct: 'Sản phẩm',
+    footerLegal: 'Pháp lý',
 
     privacyPolicyTitle: 'Chính sách Bảo mật',
     privacyPolicyLastUpdated: 'Cập nhật lần cuối: {date}',

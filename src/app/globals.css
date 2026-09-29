@@ -109,3 +109,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer utilities {
+  /* Brand gradient text: primary → tertiary */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, hsl(var(--primary)) 10%, hsl(var(--tertiary)) 90%);
+  }
+  .bg-brand-gradient {
+    background-image: linear-gradient(135deg, hsl(var(--primary-container)) 0%, hsl(var(--tertiary-container)) 100%);
+  }
+  /* Faint dot grid used as section texture */
+  .bg-dot-grid {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float,
+  .animate-float-slow {
+    animation: none;
+  }
+}
