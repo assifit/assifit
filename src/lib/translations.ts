@@ -89,6 +89,9 @@ export interface AppTranslations {
   footerDeleteAccount: string;
   footerProduct: string;
   footerLegal: string;
+  legalEyebrow: string;
+  legalOnThisPage: string;
+  legalBackHome: string;
 
   // Privacy Policy Page
   privacyPolicyTitle: string;
@@ -267,6 +270,9 @@ export const translations: Record<Locale, AppTranslations> = {
     footerDeleteAccount: 'Delete account',
     footerProduct: 'Product',
     footerLegal: 'Legal',
+    legalEyebrow: 'Legal',
+    legalOnThisPage: 'On this page',
+    legalBackHome: 'Back to home',
 
     privacyPolicyTitle: 'Privacy Policy',
     privacyPolicyLastUpdated: 'Last Updated: {date}',
@@ -291,7 +297,7 @@ export const translations: Record<Locale, AppTranslations> = {
 
     termsOfServiceTitle: 'Terms of Service',
     termsOfServiceLastUpdated: 'Last Updated: {date}',
-    termsOfServiceIntro: `Welcome to ${appName}! These terms and conditions outline the rules and regulations for the use of ${appName}'s Website and mobile application. By accessing this website/app we assume you accept these terms and conditions. Do not continue to use ${appName} if you do not agree to take all of the terms and conditions stated on this page. Please replace [Your Website/App URL Here] and [Your Country/State] with your specific information.`,
+    termsOfServiceIntro: `Welcome to ${appName}! These terms and conditions outline the rules and regulations for the use of ${appName}'s Website and mobile application. By accessing this website/app we assume you accept these terms and conditions. Do not continue to use ${appName} if you do not agree to take all of the terms and conditions stated on this page.`,
     termsOfServiceAcceptance: '1. Acceptance of Terms',
     termsOfServiceAcceptanceP1: `By using ${appName}, you signify your acceptance of these Terms of Service. If you do not agree to these terms, please do not use our Service. Your continued use of the Service following the posting of changes to these terms will be deemed your acceptance of those changes.`,
     termsOfServiceUserAccounts: '2. User Accounts',
@@ -299,7 +305,7 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceUserConduct: '3. User Conduct',
     termsOfServiceUserConductP1: `You agree not to use the Service for any unlawful purpose or in any way that interrupts, damages, or impairs the service. You agree to be responsible for all of your activity in connection with the Service.`,
     termsOfServiceIntellectualProperty: '4. Intellectual Property',
-    termsOfServiceIntellectualPropertyP1: `The Service and its original content, features, and functionality are and will remain the exclusive property of ${appName} and its licensors. The Service is protected by copyright, trademark, and other laws of both [Your Country] and foreign countries.`,
+    termsOfServiceIntellectualPropertyP1: `The Service and its original content, features, and functionality are and will remain the exclusive property of ${appName} and its licensors. The Service is protected by copyright, trademark, and other laws of both Vietnam and foreign countries.`,
     termsOfServiceTermination: '5. Termination',
     termsOfServiceTerminationP1: `We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.`,
     termsOfServiceDisclaimers: '6. Disclaimers',
@@ -307,7 +313,7 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceLimitation: '7. Limitation of Liability',
     termsOfServiceLimitationP1: `In no event shall ${appName}, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.`,
     termsOfServiceGoverningLaw: '8. Governing Law',
-    termsOfServiceGoverningLawP1: `These Terms shall be governed and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law provisions.`,
+    termsOfServiceGoverningLawP1: `These Terms shall be governed and construed in accordance with the laws of Vietnam, without regard to its conflict of law provisions.`,
     termsOfServiceChanges: '9. Changes to Terms',
     termsOfServiceChangesP1: 'We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will try to provide at least 30 days notice prior to any new terms taking effect.',
     termsOfServiceContact: '10. Contact Us',
@@ -369,7 +375,7 @@ export const translations: Record<Locale, AppTranslations> = {
     ],
     deleteAccountQuestionsTitle: 'Questions or Concerns',
     deleteAccountQuestionsP1: 'If you have any questions about the account deletion process or our data practices, please contact us at {email}.',
-    deleteAccountQuestionsP2: 'For more information about how we handle your data, please review our Privacy Policy.',
+    deleteAccountQuestionsP2: 'For more information about how we handle your data, please review our {privacy}.',
   },
   vn: {
     navFeatures: 'Tính năng',
@@ -465,6 +471,9 @@ export const translations: Record<Locale, AppTranslations> = {
     footerDeleteAccount: 'Xoá tài khoản',
     footerProduct: 'Sản phẩm',
     footerLegal: 'Pháp lý',
+    legalEyebrow: 'Pháp lý',
+    legalOnThisPage: 'Trong trang này',
+    legalBackHome: 'Về trang chủ',
 
     privacyPolicyTitle: 'Chính sách Bảo mật',
     privacyPolicyLastUpdated: 'Cập nhật lần cuối: {date}',
@@ -485,11 +494,11 @@ export const translations: Record<Locale, AppTranslations> = {
     privacyPolicyChanges: 'Thay đổi chính sách này',
     privacyPolicyChangesP1: 'Chúng tôi có thể cập nhật thông báo bảo mật này theo thời gian. Phiên bản cập nhật sẽ được biểu thị bằng ngày "Cập nhật lần cuối" đã được cập nhật và phiên bản cập nhật sẽ có hiệu lực ngay khi có thể truy cập được.',
     privacyPolicyContact: 'Liên hệ chúng tôi',
-    privacyPolicyContactP1: `Nếu bạn có câu hỏi hoặc nhận xét về thông báo này, bạn có thể gửi email cho chúng tôi tại sales@4eyeslearning.com`,
+    privacyPolicyContactP1: `Nếu bạn có câu hỏi hoặc nhận xét về thông báo này, bạn có thể gửi email cho chúng tôi tại sales.4eyeslearning@gmail.com`,
 
     termsOfServiceTitle: 'Điều khoản Dịch vụ',
     termsOfServiceLastUpdated: 'Cập nhật lần cuối: {date}',
-    termsOfServiceIntro: `Chào mừng bạn đến với ${appName}! Các điều khoản và điều kiện này phác thảo các quy tắc và quy định cho việc sử dụng Trang web và ứng dụng di động của ${appName}. Bằng cách truy cập trang web/ứng dụng này, chúng tôi cho rằng bạn chấp nhận các điều khoản và điều kiện này. Không tiếp tục sử dụng ${appName} nếu bạn không đồng ý chấp nhận tất cả các điều khoản và điều kiện được nêu trên trang này. Vui lòng thay thế [URL Trang web/Ứng dụng của bạn tại đây] và [Quốc gia/Tiểu bang của bạn] bằng thông tin cụ thể của bạn.`,
+    termsOfServiceIntro: `Chào mừng bạn đến với ${appName}! Các điều khoản và điều kiện này phác thảo các quy tắc và quy định cho việc sử dụng Trang web và ứng dụng di động của ${appName}. Bằng cách truy cập trang web/ứng dụng này, chúng tôi cho rằng bạn chấp nhận các điều khoản và điều kiện này. Không tiếp tục sử dụng ${appName} nếu bạn không đồng ý chấp nhận tất cả các điều khoản và điều kiện được nêu trên trang này.`,
     termsOfServiceAcceptance: '1. Chấp nhận Điều khoản',
     termsOfServiceAcceptanceP1: `Bằng cách sử dụng ${appName}, bạn biểu thị sự chấp nhận của mình đối với các Điều khoản Dịch vụ này. Nếu bạn không đồng ý với các điều khoản này, vui lòng không sử dụng Dịch vụ của chúng tôi. Việc bạn tiếp tục sử dụng Dịch vụ sau khi các thay đổi đối với các điều khoản này được đăng tải sẽ được coi là bạn chấp nhận những thay đổi đó.`,
     termsOfServiceUserAccounts: '2. Tài khoản Người dùng',
@@ -497,7 +506,7 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceUserConduct: '3. Hành vi Người dùng',
     termsOfServiceUserConductP1: `Bạn đồng ý không sử dụng Dịch vụ cho bất kỳ mục đích bất hợp pháp nào hoặc theo bất kỳ cách nào làm gián đoạn, hư hỏng hoặc suy giảm dịch vụ. Bạn đồng ý chịu trách nhiệm về tất cả hoạt động của mình liên quan đến Dịch vụ.`,
     termsOfServiceIntellectualProperty: '4. Sở hữu Trí tuệ',
-    termsOfServiceIntellectualPropertyP1: `Dịch vụ và nội dung gốc, các tính năng và chức năng của nó là và sẽ vẫn là tài sản độc quyền của ${appName} và các nhà cấp phép của nó. Dịch vụ được bảo vệ bởi bản quyền, nhãn hiệu và các luật khác của cả [Quốc gia của bạn] và các quốc gia nước ngoài.`,
+    termsOfServiceIntellectualPropertyP1: `Dịch vụ và nội dung gốc, các tính năng và chức năng của nó là và sẽ vẫn là tài sản độc quyền của ${appName} và các nhà cấp phép của nó. Dịch vụ được bảo vệ bởi bản quyền, nhãn hiệu và các luật khác của cả Việt Nam và các quốc gia nước ngoài.`,
     termsOfServiceTermination: '5. Chấm dứt',
     termsOfServiceTerminationP1: `Chúng tôi có thể chấm dứt hoặc đình chỉ tài khoản của bạn ngay lập tức, mà không cần thông báo trước hoặc chịu trách nhiệm pháp lý, vì bất kỳ lý do gì, bao gồm nhưng không giới hạn nếu bạn vi phạm Điều khoản.`,
     termsOfServiceDisclaimers: '6. Tuyên bố Miễn trừ Trách nhiệm',
@@ -505,7 +514,7 @@ export const translations: Record<Locale, AppTranslations> = {
     termsOfServiceLimitation: '7. Giới hạn Trách nhiệm',
     termsOfServiceLimitationP1: `${appName}, cũng như các giám đốc, nhân viên, đối tác, đại lý, nhà cung cấp hoặc các chi nhánh của mình, sẽ không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, do hậu quả hoặc trừng phạt nào, bao gồm nhưng không giới hạn, mất lợi nhuận, dữ liệu, sử dụng, uy tín hoặc các tổn thất vô hình khác, phát sinh từ việc bạn truy cập hoặc sử dụng hoặc không thể truy cập hoặc sử dụng Dịch vụ.`,
     termsOfServiceGoverningLaw: '8. Luật Điều chỉnh',
-    termsOfServiceGoverningLawP1: `Các Điều khoản này sẽ được điều chỉnh và giải thích theo luật pháp của [Quốc gia/Tiểu bang của bạn], bất kể các quy định về xung đột pháp luật của nó.`,
+    termsOfServiceGoverningLawP1: `Các Điều khoản này sẽ được điều chỉnh và giải thích theo luật pháp của Việt Nam, bất kể các quy định về xung đột pháp luật của nó.`,
     termsOfServiceChanges: '9. Thay đổi Điều khoản',
     termsOfServiceChangesP1: 'Chúng tôi có quyền, theo quyết định riêng của mình, sửa đổi hoặc thay thế các Điều khoản này bất kỳ lúc nào. Chúng tôi sẽ cố gắng thông báo trước ít nhất 30 ngày trước khi bất kỳ điều khoản mới nào có hiệu lực.',
     termsOfServiceContact: '10. Liên hệ Chúng tôi',
@@ -567,6 +576,6 @@ export const translations: Record<Locale, AppTranslations> = {
     ],
     deleteAccountQuestionsTitle: 'Câu hỏi hoặc Thắc mắc',
     deleteAccountQuestionsP1: 'Nếu bạn có bất kỳ câu hỏi nào về quy trình xóa tài khoản hoặc thực tiễn dữ liệu của chúng tôi, vui lòng liên hệ với chúng tôi tại {email}.',
-    deleteAccountQuestionsP2: 'Để biết thêm thông tin về cách chúng tôi xử lý dữ liệu của bạn, vui lòng xem Chính sách Bảo mật của chúng tôi.',
+    deleteAccountQuestionsP2: 'Để biết thêm thông tin về cách chúng tôi xử lý dữ liệu của bạn, vui lòng xem {privacy} của chúng tôi.',
   },
 };

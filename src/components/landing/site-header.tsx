@@ -26,10 +26,10 @@ export default function SiteHeader() {
   }, []);
 
   const navItems = [
-    { href: '#features', label: t.navFeatures },
-    { href: '#how-it-works', label: t.navHowItWorks },
-    { href: '#testimonials', label: t.navTestimonials },
-    { href: '#faq', label: t.navFaq },
+    { href: '/#features', label: t.navFeatures },
+    { href: '/#how-it-works', label: t.navHowItWorks },
+    { href: '/#testimonials', label: t.navTestimonials },
+    { href: '/#faq', label: t.navFaq },
   ];
 
   return (

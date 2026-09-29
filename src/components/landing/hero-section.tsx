@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Flame, ScanLine, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
+import { asset } from '@/lib/base-path';
 import { StoreButton } from './store-button';
 
 export default function HeroSection() {
@@ -57,12 +58,12 @@ export default function HeroSection() {
         <div className="relative mx-auto w-full max-w-xl">
           <div aria-hidden className="absolute inset-8 rounded-full bg-brand-gradient opacity-30 blur-3xl" />
           <Image
-            src="/images/img_hero.png"
+            src={asset('/images/img_hero.webp')}
             alt="AssiFit app on a phone"
             width={640}
-            height={640}
+            height={503}
             sizes="(min-width: 1024px) 560px, 90vw"
-            className="relative animate-float-slow drop-shadow-2xl"
+            className="relative h-auto w-full animate-float-slow drop-shadow-2xl"
             priority
           />
 
