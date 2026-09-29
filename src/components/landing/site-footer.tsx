@@ -31,6 +31,7 @@ export default function SiteFooter() {
         <div>
           <h3 className="mb-4 text-sm font-bold uppercase tracking-wider">{t.footerProduct}</h3>
           <ul className="space-y-3">
+            <li><Link href="/#whats-new" prefetch={false} className={linkClass}>{t.navWhatsNew}</Link></li>
             <li><Link href="/#features" prefetch={false} className={linkClass}>{t.navFeatures}</Link></li>
             <li><Link href="/#how-it-works" prefetch={false} className={linkClass}>{t.navHowItWorks}</Link></li>
             <li><Link href="/#faq" prefetch={false} className={linkClass}>{t.navFaq}</Link></li>

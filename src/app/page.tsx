@@ -3,6 +3,7 @@
 import SiteHeader from '@/components/landing/site-header';
 import SiteFooter from '@/components/landing/site-footer';
 import HeroSection from '@/components/landing/hero-section';
+import WhatsNewSection from '@/components/landing/whats-new-section';
 import FeaturesSection from '@/components/landing/features-section';
 import ShowcaseSection from '@/components/landing/showcase-section';
 import HowItWorksSection from '@/components/landing/how-it-works-section';
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <SiteHeader />
       <main className="flex-grow">
         <HeroSection />
+        <WhatsNewSection />
         <FeaturesSection />
         <ShowcaseSection />
         <HowItWorksSection />

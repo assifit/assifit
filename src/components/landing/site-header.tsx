@@ -26,6 +26,7 @@ export default function SiteHeader() {
   }, []);
 
   const navItems = [
+    { href: '/#whats-new', label: t.navWhatsNew },
     { href: '/#features', label: t.navFeatures },
     { href: '/#how-it-works', label: t.navHowItWorks },
     { href: '/#testimonials', label: t.navTestimonials },
